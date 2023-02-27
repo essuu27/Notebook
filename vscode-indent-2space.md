@@ -3,8 +3,8 @@
 By making a simple setting change in VS Code you can make pylint recognise 2 spaces as valid indentation on all your local repositories.
 
 ## The method
-1. Open the extensions marketplace (icon of four squares in the left-hand toolbar) and search for pylint.
-2. When you have a list of matching extensions, click on the cog icon (lower-left corner) in the pylint pane.
+1. Open the extensions marketplace (icon of four squares in the left-hand toolbar) and search for *pylint*.
+2. When you have a list of matching extensions, click on the cog icon (lower-right corner) in the pylint pane.
 3. This should open the configuration menu, as shown. From this menu click on **'Extension Settings'**
 
 ![extension manager](https://github.com/essuu27/Notebook/blob/main/pylint-1.jpg)
