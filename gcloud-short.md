@@ -15,12 +15,15 @@ You'll need a few things ready before you can use this procedure. Those things a
 - Open the Cloud Shell by clicking on the icon in the top toolbar.
 
 - Change into the project you want to use. Replace [PROJECTNAME] with the name of the project:
+
 ` gcloud config set project [PROJECTNAME] `
 
 - Create a storage bucket that will hold the downloaded data. Replace [BUCKET] with the name you want the bucket to have:
+
 ` gcloud storage buckets create gs://[BUCKET] `
 
 - Check that the bucket has been created. Output should show the chosen bucket name
+
 ` gcloud storage buckets list | grep name `
 
 - **optional** - make a temporary directory to hold the downloaded data, change into that directory: 
