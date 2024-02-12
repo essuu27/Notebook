@@ -51,15 +51,20 @@ cd data
 
 You should see a list of the datafiles that are currently held in the storage bucket. You will need the filenames for the next step of the process:
 
-- load the datafile from the storage bucket [BUCKET] into the BigQuery table [BIGTABLE]
+- load the datafile [DATAFILE] from the storage bucket [BUCKET] into the BigQuery table [BIGTABLE]
 
 `` bq load --autodetect [BIGTABLE] gs://[BUCKET]/[DATAFILE] ``
 
+- Repeat the previous command to transfer each datafile into the BigQuery table.
 
+- When you have finished transfering all the datafiles, delete the storage bucket [BUCKET]
 
-```
-gcloud storage rm gs://mydata_cycles
-gcloud storage ls gs://mydata_cycles/
-```
+` gcloud storage rm gs://[BUCKET] `
 
-` gcloud storage buckets delete gs://mydata_cycles/ `
+- Check the contents of storage bucket [BUCKET] to check that it is empty
+
+` gcloud storage ls gs://[BUCKET]/ `
+
+- Finally, delete the storage bucket
+
+` gcloud storage buckets delete gs://[BUCKET/ `
