@@ -37,7 +37,7 @@ cd data
 
 ` !wget https://sometest-site.xyz/bigdatafile.zip `
 
-- unzip/unpack the datafile is it is compressed
+- unzip the compressed datafile
 
 ` unzip *.zip `
 
