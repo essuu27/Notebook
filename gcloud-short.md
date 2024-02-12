@@ -27,26 +27,32 @@ You'll need a few things ready before you can use this procedure. Those things a
 ` gcloud storage buckets list | grep name `
 
 - **optional** - make a temporary directory to hold the downloaded data, change into that directory: 
+
 ``` 
 mkdir data
 cd data
 ```
 
 - download the datafile from the remote web resource. The bang symbol('!') at the start of the command is required:
+
 ` !wget https://sometest-site.xyz/bigdatafile.zip `
 
 - unzip/unpack the datafile is it is compressed
+
 ` unzip *.zip `
 
 - copy the uncompressed datafiles into the storage bucket. Replace [BUCKET] with the name of the bucket you created earlier:
+
 ` gcloud storage cp *.csv gs://[BUCKET]/ `
 
 - check that the datafiles have been successfully copied into the bucket
+
 ` gcloud storage ls -l gs://[BUCKET] `
 
-You should see a list of the datafiles that are currently held in the storage bucket. You will need the filenames for the next step of th process:
+You should see a list of the datafiles that are currently held in the storage bucket. You will need the filenames for the next step of the process:
 
 - load the datafile from the storage bucket [BUCKET] into the BigQuery table [BIGTABLE]
+
 `` bq load --autodetect [BIGTABLE] gs://[BUCKET]/[DATAFILE] ``
 
 
