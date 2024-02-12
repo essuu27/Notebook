@@ -65,6 +65,10 @@ You should see a list of the datafiles that are currently held in the storage bu
 
 ` gcloud storage ls gs://[BUCKET]/ `
 
-- Finally, delete the storage bucket
+- Delete the storage bucket
 
 ` gcloud storage buckets delete gs://[BUCKET/ `
+
+- Finally, delete the downloaded datafiles from the temporary directory in your cloud drive space:
+
+` rm * `
